@@ -5,8 +5,6 @@ import RPi.GPIO as GPIO
 import time
 from psonic import *
 
-#MasterVolume(150)
-
 
 # HIGH or LOWの時計測
 def pulseIn(PIN, start=1, end=0):
@@ -42,7 +40,6 @@ def calc_distance(TRIG_PIN, ECHO_PIN, num, v=34000):
         if ((avg + 10) > distance) and ((avg - 10) < distance):
                 
             print(distance*5, "cm")
-        #    fout.write(str(distance*5) + "\n")
         # play()この関数に渡す引数の値によって鳴る音が変わる
             play(distance + 59)
             avg = distance 
@@ -55,14 +52,6 @@ def calc_distance(TRIG_PIN, ECHO_PIN, num, v=34000):
     # ピン設定解除
     GPIO.cleanup()
 
-
-
-
-    
-    
-
-
-    
 # TRIGとECHOのGPIO番号   
 TRIG_PIN = 14
 ECHO_PIN = 15
@@ -73,7 +62,6 @@ GPIO.setup(TRIG_PIN,GPIO.OUT)
 GPIO.setup(ECHO_PIN,GPIO.IN)
 GPIO.setwarnings(False)
 
-
 use_synth(PROPHET)
 # 距離計測(TRIGピン番号, ECHO_PIN番号, 計測回数, 音速[cm/s])
-calc_distance(TRIG_PIN, ECHO_PIN, 100, 34000)
+calc_distance(TRIG_PIN, ECHO_PIN, 10, 34000)
