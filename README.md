@@ -1,0 +1,2 @@
+# sense-sonicpi
+超音波センサーで感知した情報を元にRaspberryPiで音階を鳴らす
