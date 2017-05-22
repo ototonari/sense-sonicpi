@@ -15,7 +15,11 @@
 1 以下のサイトを参考に、ブレッドボードと超音波センサー、Raspberry Pi3を接続する。
 [【ラズベリーパイ3】Pythonで超音波距離センサ(HC-SR04)の精度向上（気温考慮）](https://algorithm.joho.info/programming/python/raspberry3-ultrasonic-distance-sensor-hcsr04-temp/)
 2 Python-sonicが必要なのでインストールします。
-　``` $ pip install python-sonic ```
+
+```
+$ pip install python-sonic
+```
+
 　うまく行かない方は [python-sonic](https://github.com/gkvoelkl/python-sonic "python-sonic") こちらを参考にしてください。
 
 3 GUI環境ならメニューの[プログラミング]-[Sonic Pi]をクリックします。
